@@ -7,15 +7,10 @@ export default function Termekek() {
     const {tLista}=useContext(ApiContext);
   return (
     <div className="row">
-      <Termek/>
-      <Termek/>
-      <Termek/>
-      <Termek/>
-      <Termek/>
-      <Termek/>
-      <Termek/>
-      <Termek/>
-      <Termek/>
+      {tLista.map((termek)=>{
+     return <Termek termek={termek} key={termek.id}/>
+    })}
     </div>
+    
   )
 }
