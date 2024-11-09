@@ -17,7 +17,7 @@ export default function TermekUrlap() {
         event.preventDefault()
 
         console.log(adat);
-        postAdat('https://fakestoreapi.com/products', adat);
+        postAdat('/products', adat);
     }
 
     function valtozasKezeles(event){

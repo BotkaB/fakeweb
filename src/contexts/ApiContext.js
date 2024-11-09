@@ -1,5 +1,5 @@
 import { createContext, useEffect, useState } from "react";
-import axios from 'axios';
+import { myAxios } from "./MyAxios";
 
 export const ApiContext = createContext("");
 
@@ -9,7 +9,7 @@ export const ApiProvider = ({ children }) => {
 
 
     function getAdat(vegpont) {
-        axios
+        myAxios
             .get(vegpont)
 
 
@@ -27,11 +27,11 @@ export const ApiProvider = ({ children }) => {
             });
     }
     useEffect(() => {
-        getAdat('https://fakestoreapi.com/products')
+        getAdat('/products')
     }, []);
 
     function postAdat(vegpont, adat) {
-        axios
+      myAxios
             .post(vegpont, adat)
 
 
