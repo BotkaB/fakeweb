@@ -29,7 +29,27 @@ export const ApiProvider = ({ children }) => {
     useEffect(() => {
         getAdat('https://fakestoreapi.com/products')
     }, []);
-    return <ApiContext.Provider value={{ tLista }}>
+
+    function postAdat(vegpont, adat) {
+        axios
+            .post(vegpont, adat)
+
+
+            .then(function (response) {
+                // handle success
+                console.log(response);
+              
+            })
+            .catch(function (error) {
+                // handle error
+                console.log(error);
+            })
+            .finally(function () {
+                // always executed
+            });
+    }
+ 
+    return <ApiContext.Provider value={{ tLista, postAdat }}>
         {children}
     </ApiContext.Provider>
 

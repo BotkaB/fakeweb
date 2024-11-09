@@ -1,6 +1,8 @@
-import React, { useState } from 'react'
+import React, { useContext, useState } from 'react'
+import { ApiContext } from '../../contexts/ApiContext'
 
 export default function TermekUrlap() {
+    const {postAdat}=useContext(ApiContext);
 
     const [adat, setAdat] = useState({
         title: 'asdffgf',
@@ -14,7 +16,8 @@ export default function TermekUrlap() {
     function kuldesKezeles(event) {
         event.preventDefault()
 
-        console.log(adat)
+        console.log(adat);
+        postAdat('https://fakestoreapi.com/products', adat);
     }
 
     function valtozasKezeles(event){
