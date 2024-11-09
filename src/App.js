@@ -1,5 +1,6 @@
 
-import Termekek from "./components/termekek";
+import Termekek from "./components/Public/termekek";
+import TermekUrlap from "./components/Admin/TermekUrlap";
 
 function App() {
   return (
@@ -8,6 +9,8 @@ function App() {
         <h1>Fakestore webáruház</h1>
        
       </header>
+      <section className="p-5">
+        <TermekUrlap/></section>
       <article>
         <Termekek/>
       </article>

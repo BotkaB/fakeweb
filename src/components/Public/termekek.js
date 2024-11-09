@@ -1,6 +1,6 @@
 import React, { useContext } from 'react';
 import Termek from './termek';
-import { ApiContext } from '../contexts/ApiContext';
+import { ApiContext } from '../../contexts/ApiContext';
 
 export default function Termekek() {
 
