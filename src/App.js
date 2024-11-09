@@ -10,7 +10,8 @@ function App() {
        
       </header>
       <section className="p-5">
-        <TermekUrlap/></section>
+        <TermekUrlap/>
+        </section>
       <article>
         <Termekek/>
       </article>
